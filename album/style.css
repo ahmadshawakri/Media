@@ -1,0 +1,43 @@
+.albums-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.albums-container hr{
+    width: 60%;
+    margin-top: 3rem;
+}
+
+img{
+    width: 300px;
+    height: 300px;
+}
+
+.headers{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.headers h4{
+    margin-top: 0;
+}
+
+.albums-container section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+}
+
+.image-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+section > h2:before{
+    content: url(./img/posts.png);
+    padding-right: 1.3rem;
+}
