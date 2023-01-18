@@ -1,3 +1,10 @@
+body{
+    height: 100vh;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+}
+
 .albums-container{
     display: flex;
     justify-content: center;
@@ -20,21 +27,31 @@ img{
     min-width: 60%;
 }
 
+.headers h1{
+    font-family: "Comfortaa";
+}
+
 .headers h4{
     margin-top: 0;
+    font-family: "Comfortaa";
 }
 
 .albums-container section{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
     min-width: 60%;
 }
 
 .image-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    
 }
 
 section h2{
@@ -50,4 +67,24 @@ section h2:hover{
     padding: 1.25rem 1.25rem;
     border: .3125rem solid #000;
     transition: all 0.2s ease-in-out;
+}
+
+
+@media (max-width: 800px) {
+    section h2{
+        font-weight: 400;
+        font-size: 1.3rem;
+    }
+
+    .headers{
+        min-width: 90%;
+    }
+
+    img{
+        min-width: 12rem;
+        height: 12rem;
+    }
+    .albums-container hr{
+        min-width: 90%;
+    }
 }
