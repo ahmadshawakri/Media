@@ -1,0 +1,56 @@
+body{
+    height: 100vh;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+}
+
+img{
+    min-width: 18.75rem;
+    height: 18.75rem;
+}
+
+.photos-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.photos-container > h1{
+    min-width: 80%;
+    text-align: center;
+}
+
+.headers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80%;
+}
+.headers h1{
+    font-family: "Comfortaa";
+}
+
+.photos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.photos section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 18.75rem;
+    min-height: 18.75rem;
+}
+section h3{
+    width: 100%;
+    min-height: 3.125rem;
+    text-align: center;
+}
