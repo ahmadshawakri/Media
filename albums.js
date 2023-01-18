@@ -45,5 +45,5 @@ async function loadAlbum(album){
 
 
 function gotoPhotos(element){
-    window.location.href = `./photos.html?${element.id}`
+    window.location.href = `./photos.html?id=${element.id}`
 }
