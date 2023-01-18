@@ -39,7 +39,7 @@ h1{
 }
 
 #login-form input{
-    width: 21rem;
+    min-width: 21rem;
     height: 3.2rem;
     border: 2px solid #000;
     font-size: 1rem;
@@ -48,11 +48,11 @@ h1{
 }
 
 #login-form button{
-    width: 21.4rem;
+    min-width: 21.4rem;
     height: 3.2rem;
     background: #000;
-    border: 2px solid #000;
-    border-radius: 6px;
+    border: .125rem solid #000;
+    border-radius: .375rem;
     color: #fff;
     font-weight: 900;
     font-size: 0.8rem;
@@ -70,5 +70,5 @@ input::placeholder{
     justify-content: center;
     color: #ba3939;
     background: #ffe0e0;
-    border: 1px solid #a33a3a;
+    border: .0625rem solid #a33a3a;
 }

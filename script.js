@@ -1,23 +1,27 @@
-function checkEmail(){
-    let user_email = document.getElementById("email").value;
+async function login(){
+    let userEmail = document.getElementById("email").value;
     let errorMsg = document.getElementById("error");
-    fetch('https://jsonplaceholder.typicode.com/users')
-    .then((response) => response.json())
-    .then((data) => {
-        const user = data.find(item => item.email === user_email)
-        try{
-            if(user === undefined){
-                throw "Invalid Email Address"
-            }
-            else{
-                errorMsg.style.display = "none"
-                localStorage.user = JSON.stringify(user)
-                window.location.href = "./album/index.html"
-            }
+
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const users = await response.json();
+    console.log(users);
+
+    
+    const loggedUser = await users.find(user => user.email === userEmail);
+
+    try{
+        if(loggedUser === undefined){
+            throw "Invalid Email Address"
         }
-        catch(err){
-            errorMsg.innerHTML = err
-            errorMsg.style.display = "flex"
+        else{
+            errorMsg.style.display = "none"
+            localStorage.user = JSON.stringify(loggedUser)
+            window.location.href = "./albums.html"
         }
-    });
+    }
+    catch(err){
+        errorMsg.innerHTML = err
+        errorMsg.style.display = "flex"
+    }
+    
 }
